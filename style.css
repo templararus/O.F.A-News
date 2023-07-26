@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-title{
+    font-size: 150px;
+    width: fit-content;
+    margin: auto;
+}
+
+.title{
+    color: black;
+    position: relative;
+    top: 150px;
+    right: 50px;
+    z-index: 3;
+    animation: jump 3s linear 0s infinite;
+}
+
+.title-red{
+    color: red;
+    opacity: 0.5;
+    position: relative;
+    z-index: 2;
+    animation: jump 2s linear 0s infinite alternate;
+}
+
+.title-blue{
+    color: blue;
+    opacity: 0.5;
+    position: relative;
+    bottom: 150px;
+    left: 50px;
+    z-index: 1;
+    animation: jump 2s linear 1s infinite reverse;
+}
+
+.header-btn{
+    display: block;
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: 0.7s;
+}
+
+.header-btn-red{
+    background-color: red;
+    width: 300px;
+    height: 50px;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+    z-index: 2;
+}
+
+.header-btn-blue{
+    background-color: blue;
+    width: 300px;
+    height: 50px;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    z-index: 1;
+}
+
+.header-btn:hover{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.go-up-btn{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px gray;
+    position: fixed ;
+    bottom: 40px;
+    right: 40px;
+}
+
+.articles-container{
+    width: 1000px;
+    padding: 30px;
+    margin: auto;
+}
+
+.article{
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid black;
+    margin-top: 100px;
+}
+
+.article-title{
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 10px ;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.article-img{
+    width: 100%;
+    filter: brightness(0.5);
+    box-shadow: 0 5px 20px black;
+    position: sticky;
+    top: 0;
+    
+}
+
+.article-text{
+    padding: 40px;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 9;
+}
+
+.article-category{
+    background-color: tomato;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.article-img:hover{
+    filter: brightness(1);
+    transform: scale(1.02);
+    transition: 1s;
+}
+
+@keyframes jump{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(-20px,20px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
